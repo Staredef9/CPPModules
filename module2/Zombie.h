@@ -15,6 +15,6 @@ class Zombie{
 		void	announce();
 
 		void	setType(std::string newType);
-
+		void	setName(std::string newName);
 
 };

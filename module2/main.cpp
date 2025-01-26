@@ -1,27 +1,17 @@
 #include "Zombie.h"
 #include "ZombiEvent.h"
-
-
+#include "ZombieHorde.h"
 
 int main()
 {
+	int number = 0; 
 
-	Zombie one("Brutto", "Carlo");
-	one.announce();
+	std::string input;
+	std::cin >> input;
+	number = stoi(input);
 
-	Zombie *puntato = new Zombie("Alto","Gianni");
-
-	puntato->announce();
-	delete puntato;
-
-	ZombieEvent provona;
-
-
-	provona.randomChump();
-	Zombie *eventpointed = provona.newZombie("Ultimo");	
-	eventpointed->announce();
-	delete eventpointed;
-
+	ZombieHorde zombies(number);
+	zombies.announce();
 
 
 }
